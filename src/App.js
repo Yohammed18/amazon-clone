@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //BEM
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          {/**Checkout Page Root */}
+          <Route 
+          path="/checkout" 
+          element={<><Header/><h1>This is the Checkout Page</h1></>}/>
+
+          {/**Home Page Root
+           * Defualt page is always at the bottom
+           */}
+          <Route 
+          path="/" 
+          element={<><Header/><Home/></>}/>
+        </Routes>        
+      </div>
+    </BrowserRouter>
   );
 }
 
