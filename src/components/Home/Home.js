@@ -45,7 +45,7 @@ function Home() {
                 id='7572333' 
                 title="Troadlop Men's Running Shoes Non Slip Shoes"
                 image='https://m.media-amazon.com/images/I/615V+J89ulL._AC_UY395_.jpg'
-                price={234.98}
+                price={101.98}
                 rating={1}
                 />
             </div>
