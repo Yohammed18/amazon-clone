@@ -9,9 +9,8 @@ function Checkout() {
     <div className='checkout'>
         <div className="checkout_left">
             <img className='checkout_ad' 
-            src="https://libertyhousenh.org/wp-content/uploads/2020/10/Amazon-smile-web-banner.jpg" 
+            src="https://m.media-amazon.com/images/I/61Et7ebvT9L._SX3000_.jpg" 
             alt="" />
-
             <div>
                 <h2 className="checkout_title">
                     Your Shopping Basket

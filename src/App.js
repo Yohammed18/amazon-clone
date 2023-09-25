@@ -15,7 +15,6 @@ function App() {
           <Route 
           path="/checkout" 
           element={<><Header/><Checkout /></>}/>
-
           {/**Home Page Root
            * Defualt page is always at the bottom
            */}
