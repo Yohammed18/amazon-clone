@@ -17,7 +17,7 @@ const [{basket}, dispatch] = useStateValue();
 
         <div>
             <h2 className="checkout_title">Your Shopping Basket</h2>
-            {/* {basket.map(bk =>(
+            {basket.map(bk =>(
                 <CheckoutProduct
                 id={bk.id}
                 image={bk.image}
@@ -25,21 +25,7 @@ const [{basket}, dispatch] = useStateValue();
                 price={bk.price}
                 rating={bk.rating}
                 />    
-            ))} */}
-                <CheckoutProduct
-                id='130123'
-                image="https://m.media-amazon.com/images/I/81tWOXksBiL._AC_UX395_.jpg"
-                title='Nike Shoes'
-                price={120.29}
-                rating={5}
-                />
-                <CheckoutProduct
-                id='130123'
-                image="https://m.media-amazon.com/images/I/81Xjk5hKTNL._AC_UL320_.jpg"
-                title='Nike Shoes'
-                price={120.29}
-                rating={5}
-                />
+            ))}
         </div>
         </div>
         <div className="checkout_right">

@@ -1,11 +1,13 @@
 .checkoutProduct{
     display: flex;
     margin-top: 20px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 
-.checkoutProduct_info {
+ .checkoutProduct_info {
     padding-left: 20px;
+    padding-bottom: 20px;
+    float: right;
 }
 
 .checkoutProduct_info > button {
@@ -24,5 +26,9 @@
 
 .checkoutProduct_rating{
     display: flex;
+}
 
+.checkoutProduct_title {
+    font-size: 17px;
+    font-weight: 800;
 }
