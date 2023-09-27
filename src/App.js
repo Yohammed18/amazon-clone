@@ -2,16 +2,36 @@ import './App.css';
 import React, { useEffect } from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
 //the lister will keep track who is sign in
+import { auth } from './firebase';
+import { useStateValue } from './components/StateProvider/StateProvider';
 
 function App() {
-  //dynamic if statement
+  const [{}, dispatch] = useStateValue()
+
   useEffect(() =>{
     //Will only run once the app component loads...
 
+    auth.onAuthStateChanged(authUser =>{
+      console.log('USER: ',authUser)
+
+      if(authUser){
+        //The user was logged in
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+      }else {
+        // The user is logged out
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+    })
   }, [])
 
   return (
@@ -23,7 +43,7 @@ function App() {
           path="/login" 
           element={<><Login /></>}/>
           {/**Home Page Root
-           * Defualt page is always at the bottom
+           * Default page is always at the bottom
            */}
           {/**Checkout Page Root */}
           <Route 
